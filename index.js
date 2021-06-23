@@ -5,7 +5,15 @@
 
 
 function maximumWealth(accounts) {
-    
+    totalWealth = []
+    accounts.forEach(acc => {
+        total = 0
+        acc.forEach(wealth => {
+            total = total + wealth
+        })
+        totalWealth.push(total)
+    })
+    return Math.max(...totalWealth)
 }; 
 
 let accounts1 = [[1,2,3],[3,2,1]]
